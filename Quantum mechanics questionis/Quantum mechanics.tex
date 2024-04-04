@@ -1,0 +1,70 @@
+\documentclass{report}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{newtxtext,newtxmath}
+\usepackage{amsmath}
+
+\title{Quantum Mechanics Questions}
+\author{Sadasivan MJ}
+\date{16-02-2024}
+
+\begin{document}
+    \maketitle
+\begin{enumerate}
+    
+    \item \textbf{Consider $\psi(x) = \frac{1}{\sqrt{2}}(| \phi_1 \rangle + | \phi_2 \rangle)$ where $| \phi_1 \rangle and | \phi_2 \rangle$ are the ground state and the first excited state wave functions of a particle in a deep potential well of length 'L'. Then $\langle \phi_1|\hat{P_x}|\phi_2 \rangle$ is?}
+    \vspace{\baselineskip}
+\begin{equation*}
+    \begin{split}
+        \langle \phi_1|\hat{P_x}|\phi_2 \rangle & = \int_{0}^{L} - \sqrt{\frac{2}{L}}sin(\frac{\pi x}{L}) \cdot i\hbar\frac{\partial}{\partial x}( \sqrt{\frac{2}{L}}sin(\frac{2\pi x}{L})) dx \\& = -\frac{2i}{L} \int_{0}^{L}sin(\frac{\pi x}{L}) \cdot cos(\frac{2 \pi x}{L}) \cdot \frac{2 \pi}{L} dx\\& = -\frac{4\pi i}{L^2} \int_{0}^{L}sin(\frac{\pi x}{L}) \cdot (1-2sin^2(\frac{\pi x}{L})) dx \\& = -\frac{4\pi i}{L^2} \int_{0}^{L} sin(\frac{\pi x}{L}) \cdot 2\int_{0}^{L}sin^3(\frac{\pi x}{L}) dx
+    \end{split}
+\end{equation*}
+
+Now
+
+\begin{equation*}
+    \begin{split}
+        \int_{0}^{L}sin^3(\frac{\pi x}{L}) dx &= \int_{0}^{L}sin^2(\frac{\pi x}{L}) \cdot sin(\frac{\pi x}{L}) dx \\& = \int_{0}^{L}(1-cos^2(\frac{\pi x}{L})) \cdot sin(\frac{\pi x}{L}) dx
+    \end{split}
+\end{equation*}
+
+Substituting $1-cos^2(\frac{\pi x}{L}) = u \implies du = -2sin(\frac{\pi x}{L}) \cdot \frac{\pi}{L} dx$ or $sin(\frac{\pi x}{L}) dx = -\frac{L}{2\pi}du$ and our equation simplifies to 
+
+\begin{equation*}
+    \begin{split}
+         -\frac{L}{2\pi}\int udu &= -\frac{L}{4\pi} u^2 \\&= \left[-\frac{L}{2\pi} (1-cos^2(\frac{\pi x}{L}))^2\right]_0^L
+    \end{split}
+\end{equation*}
+
+\item \textbf{The motion of a quantum particle in one - dimension is governed by the Hamiltonian $H = \frac{p^2}{2} + gx$, The expectation value od the e force on the particle is}
+\vspace{\baselineskip}
+
+The expectation value a quantum measurement correspond to the classical analogue of it. Here Energy = $\frac{p^2}{2} + gx$ and force = $-\frac{\partial H}{\partial x} = -g$
+
+\item \textbf{A particle is confined in the region 0 $\leq$ x  $\leq$ a and its wave function is $$\psi(x,t) = sin(\frac{\pi x}{a})e^{-i\omega t}$$ The probability of finding the electron in the interval $\frac{a}{4} \leq x \leq \frac{3a}{4} $is}
+\vspace{\baselineskip}
+
+The given wavefunction is not normalised, We know 
+
+\begin{equation*}
+        \int_{-\infty}^{\infty} \psi^* \psi = 1
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        A^2 \int_{0}^{a} sin^2(\frac{\pi x}{a}) &= \frac{A^2}{2} \int_{0}^{a} 1-cos(\frac{2\pi x}{a}) dx \\&= \frac{A^2}{2}\left[x-sin(\frac{2\pi x}{a}) \cdot \frac{a}{2\pi}\right]_{0}^{a} \\&= \frac{A}{2}a = 1
+    \end{split}
+\end{equation*}
+
+or A = $\sqrt{\frac{2}{a}}$
+
+\begin{equation*}
+    \begin{split}
+        P &= 4a^2\int_{\frac{a}{4}}^{\frac{3a}{4}} \sqrt{\frac{2}{a}}sin(\frac{\pi x}{a})e^{i\omega t} \cdot \sqrt{\frac{2}{a}}sin(\frac{\pi x}{a})e^{-i\omega t} dx \\&= \frac{2}{a}\int_{\frac{a}{4}}^{\frac{3a}{4}}  sin^2(\frac{\pi x}{a}) dx \\&= \frac{1}{a} \int_{\frac{a}{4}}^{\frac{3a}{4}} 1 - cos(\frac{2 \pi x}{a}) dx \\&= \frac{1}{a} \left[x-sin(\frac{2 \pi x}{a}) \cdot \frac{a}{2 \pi}\right]_{\frac{a}{4}}^{\frac{3a}{4}} \\&= \frac{1}{a}\left[\frac{a}{2}+\frac{a}{2\pi}\right] \\&= \frac{\pi + 2}{2\pi}
+    \end{split}
+\end{equation*}
+
+\end{enumerate}
+\end{document}  

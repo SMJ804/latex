@@ -1,0 +1,6 @@
+\contentsline {chapter}{Critical solution Temperature \toclineinsert {}{21-11-2023}}{2}{}%
+\contentsline {chapter}{Composition From Viscosity Measurement \toclineinsert {}{5-12-2023}}{6}{}%
+\contentsline {chapter}{Caliberation of pH meter and Measurement of pH of solution\toclineinsert {}{5-12-2023}}{8}{}%
+\contentsline {chapter}{Calorimetric Determination of copper ions in solution \toclineinsert {}{23-01-2024}}{10}{}%
+\contentsline {chapter}{Conductometric titration \toclineinsert {}{30-01-2024}}{12}{}%
+\contentsline {chapter}{Determination Of Molecular Mass Of A Compound By Rast's Method \toclineinsert {}{15-02-2024}}{15}{}%
